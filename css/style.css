@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#maze {
+    display: inline-block;
+    margin: 40px 0;
+}
+
+.row {
+    line-height: 0;
+    text-align: left;
+}
+
+.cell {
+    display: inline-block;
+    border: 1px solid #C0C0C0;
+    margin: -1px 0 0 -1px;
+    width: 30px;
+    height: 30px;
+}
+
+.msg {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #ff0000;
+    display: none;
+}
+
+.info {
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+}
+
+.cell:not(.wall) {
+    cursor: pointer;
+}
+
+.cell:not(.wall):hover {
+    border: 3px solid #000;
+}
+
+.wall {
+    background: #48D1CC;
+}
+
+.start {
+    background: #008000;
+}
+
+.finish {
+    background: url('../img/finish.png');
+    background-size: cover;
+}
+
+.fillCell {
+    background: #ffff00;
+}
+
+#mazeData {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.btn, .confirm {
+    display: inline-block;
+    text-transform: uppercase;
+    border: 1px solid #48D1CC;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: #48D1CC;
+}
+
+.confirm {
+    border: 1px solid #008000;
+    color: #008000;
+}
+
+.btn:hover {
+    background: #48D1CC;
+    color: #fff;
+}
+
+.confirm:hover {
+    background: #008000;
+    color: #fff;
+}
